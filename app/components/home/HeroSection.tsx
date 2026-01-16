@@ -15,7 +15,7 @@ export function HeroSection() {
             beamHeight={50}
             beamNumber={20}
             lightColor="#E598DA"
-            speed={2}
+            speed={5}
             noiseIntensity={0.8}
             scale={0.2}
             rotation={35}
