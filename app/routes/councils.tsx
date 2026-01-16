@@ -42,8 +42,8 @@ const councilCategories = {
       activities: [
         "Server-side programming and APIs",
         "Database design and optimization",
-        "System architecture and scalability",
-        "DevOps and deployment strategies",
+        "System scalability",
+        "Deployment strategies",
       ],
       gradientFrom: "from-cyan-500",
       gradientTo: "to-teal-500",

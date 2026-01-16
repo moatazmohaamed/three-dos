@@ -20,6 +20,16 @@ export function HeroSection() {
             scale={0.2}
             rotation={35}
           />
+          <Beams
+            beamWidth={3}
+            beamHeight={50}
+            beamNumber={20}
+            lightColor="#E598DA"
+            speed={5}
+            noiseIntensity={0.8}
+            scale={0.2}
+            rotation={35}
+          />
         </div>
       </div>
 
@@ -40,7 +50,7 @@ export function HeroSection() {
           </div>
 
           {/* CTAs */}
-          <div className="flex gap-6 justify-center flex-wrap pt-8 animate-fade-in [animation-delay:0.3s] [animation-fill-mode:backwards]">
+          <div className="flex gap-6 justify-center flex-wrap pt-2 animate-fade-in [animation-delay:0.3s] [animation-fill-mode:backwards]">
             <Link to="/councils">
               <Button variant="primary">Explore Councils</Button>
             </Link>
