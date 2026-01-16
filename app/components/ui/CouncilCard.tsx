@@ -1,7 +1,8 @@
 import SpotlightCard from "./SpotlightCard";
+import type { ReactNode } from "react";
 
 interface CouncilCardProps {
-  icon: string;
+  icon: ReactNode;
   title: string;
   description: string;
   activities: string[];
@@ -30,7 +31,7 @@ export function CouncilCard({
     >
       <div className="space-y-6">
         <div
-          className={`w-20 h-20 rounded-3xl bg-gradient-to-br ${gradientFrom} ${gradientTo} flex items-center justify-center text-4xl`}
+          className={`w-20 h-20 rounded-3xl bg-gradient-to-br ${gradientFrom} ${gradientTo} flex items-center justify-center text-4xl text-white`}
         >
           {icon}
         </div>

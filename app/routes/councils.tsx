@@ -4,6 +4,22 @@ import Navbar from "../components/home/Navbar";
 import Footer from "../components/home/Footer";
 import LightRays from "../components/ui/LightRays";
 import { CouncilCard } from "../components/ui/CouncilCard";
+import {
+  FaServer,
+  FaCode,
+  FaBullhorn,
+  FaUserTie,
+  FaChartLine,
+  FaDollarSign,
+  FaBullseye,
+  FaProjectDiagram,
+  FaUsers,
+  FaHeart,
+  FaGraduationCap,
+  FaVideo,
+  FaInstagram,
+  FaPalette,
+} from "react-icons/fa";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -19,7 +35,7 @@ export function meta({}: Route.MetaArgs) {
 const councilCategories = {
   academic: [
     {
-      icon: "�",
+      icon: <FaServer />,
       title: "Backend Development",
       description:
         "Build robust server-side applications and APIs. Focus on database design, system architecture, and scalable solutions that power modern applications.",
@@ -35,12 +51,12 @@ const councilCategories = {
       accentColor: "text-cyan-400",
     },
     {
-      icon: "�",
+      icon: <FaCode />,
       title: "Frontend Development",
       description:
         "Create engaging user interfaces and experiences. Master modern frameworks, responsive design, and interactive web applications that users love.",
       activities: [
-        "UI/UX design and implementation",
+        "UI/UX figma implementation",
         "Modern JavaScript frameworks",
         "Responsive web design",
         "Performance optimization",
@@ -51,7 +67,7 @@ const councilCategories = {
       accentColor: "text-purple-400",
     },
     {
-      icon: "📊",
+      icon: <FaBullhorn />,
       title: "Marketing",
       description:
         "Master digital marketing strategies, brand building, and customer engagement. Learn to create compelling campaigns and drive business growth through effective marketing techniques.",
@@ -67,7 +83,7 @@ const councilCategories = {
       accentColor: "text-orange-400",
     },
     {
-      icon: "�",
+      icon: <FaUserTie />,
       title: "CEO",
       description:
         "The driving force that connects vision with action. Leads the team with clarity and direction, ensuring that every idea is transformed into real results.",
@@ -83,7 +99,7 @@ const councilCategories = {
       accentColor: "text-indigo-400",
     },
     {
-      icon: "📈",
+      icon: <FaChartLine />,
       title: "Stock",
       description:
         "Learn investment strategies, market analysis, and financial planning. Develop skills in portfolio management and understand market dynamics for informed trading decisions.",
@@ -101,7 +117,7 @@ const councilCategories = {
   ],
   operational: [
     {
-      icon: "�",
+      icon: <FaBullseye />,
       title: "Public Relations",
       description:
         "Manage external communications and build strong relationships with stakeholders. Focus on brand reputation, media relations, and strategic communication.",
@@ -117,7 +133,7 @@ const councilCategories = {
       accentColor: "text-blue-400",
     },
     {
-      icon: "�",
+      icon: <FaDollarSign />,
       title: "Fundraising",
       description:
         "Drive financial sustainability through strategic fundraising initiatives. Develop donor relationships and create compelling campaigns to support organizational goals.",
@@ -133,7 +149,7 @@ const councilCategories = {
       accentColor: "text-emerald-400",
     },
     {
-      icon: "🎯",
+      icon: <FaProjectDiagram />,
       title: "Coordination",
       description:
         "Ensure seamless operations and effective collaboration across all teams. Focus on project management, resource allocation, and organizational efficiency.",
@@ -149,7 +165,7 @@ const councilCategories = {
       accentColor: "text-yellow-400",
     },
     {
-      icon: "👥",
+      icon: <FaUsers />,
       title: "HR",
       description:
         "Manage human resources, talent acquisition, and organizational development. Focus on building strong teams, employee engagement, and creating positive workplace culture.",
@@ -165,7 +181,7 @@ const councilCategories = {
       accentColor: "text-amber-400",
     },
     {
-      icon: "💝",
+      icon: <FaHeart />,
       title: "Soul",
       description:
         "Our charity council dedicated to making a positive impact in the community. Focus on social responsibility, volunteer work, and creating meaningful change through compassionate action.",
@@ -181,7 +197,7 @@ const councilCategories = {
       accentColor: "text-pink-400",
     },
     {
-      icon: "🎓",
+      icon: <FaGraduationCap />,
       title: "Juniors",
       description:
         "Develop the next generation of leaders through mentorship and skill-building programs. Focus on youth engagement, training, and leadership development.",
@@ -197,7 +213,7 @@ const councilCategories = {
       accentColor: "text-teal-400",
     },
     {
-      icon: "📺",
+      icon: <FaVideo />,
       title: "Media",
       description:
         "Produce engaging multimedia content and manage digital communications. Focus on video production, content creation, and storytelling across various media platforms.",
@@ -213,7 +229,7 @@ const councilCategories = {
       accentColor: "text-slate-400",
     },
     {
-      icon: "📱",
+      icon: <FaInstagram />,
       title: "Social Media Marketing",
       description:
         "Drive engagement and growth through strategic social media campaigns. Master platform-specific strategies, content creation, and community management.",
@@ -229,7 +245,7 @@ const councilCategories = {
       accentColor: "text-rose-400",
     },
     {
-      icon: "🎨",
+      icon: <FaPalette />,
       title: "Graphic Design",
       description:
         "Create stunning visual communications and brand identities. Master design principles, typography, and digital tools to craft compelling visual experiences.",
