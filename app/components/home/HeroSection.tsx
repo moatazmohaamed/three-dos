@@ -1,6 +1,7 @@
 import { Button } from "../ui/Button";
 import Beams from "../ui/Beams";
 import Navbar from "./Navbar";
+import { Link } from "react-router";
 
 export function HeroSection() {
   return (
@@ -40,8 +41,12 @@ export function HeroSection() {
 
           {/* CTAs */}
           <div className="flex gap-6 justify-center flex-wrap pt-8 animate-fade-in [animation-delay:0.3s] [animation-fill-mode:backwards]">
-            <Button variant="primary">Explore Councils</Button>
-            <Button variant="secondary">Join ThreeDOS</Button>
+            <Link to="/councils">
+              <Button variant="primary">Explore Councils</Button>
+            </Link>
+            <Link to="/contact">
+              <Button variant="secondary">Join ThreeDOS</Button>
+            </Link>
           </div>
         </div>
       </div>
