@@ -1,0 +1,71 @@
+/* Indigo Plasma Animation */
+.plasma-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    filter: blur(80px);
+}
+
+.plasma-blob {
+    position: absolute;
+    border-radius: 50%;
+    mix-blend-mode: screen;
+    animation: plasma-float 20s ease-in-out infinite;
+}
+
+.plasma-blob-1 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.8) 0%, transparent 70%);
+    top: -10%;
+    left: -10%;
+    animation-delay: 0s;
+}
+
+.plasma-blob-2 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.8) 0%, transparent 70%);
+    top: 20%;
+    right: -10%;
+    animation-delay: -5s;
+}
+
+.plasma-blob-3 {
+    width: 550px;
+    height: 550px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.8) 0%, transparent 70%);
+    bottom: -10%;
+    left: 20%;
+    animation-delay: -10s;
+}
+
+.plasma-blob-4 {
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(79, 70, 229, 0.6) 0%, transparent 70%);
+    bottom: 20%;
+    right: 20%;
+    animation-delay: -15s;
+}
+
+@keyframes plasma-float {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    25% {
+        transform: translate(50px, -50px) scale(1.1);
+    }
+
+    50% {
+        transform: translate(-30px, 30px) scale(0.9);
+    }
+
+    75% {
+        transform: translate(40px, 60px) scale(1.05);
+    }
+}
