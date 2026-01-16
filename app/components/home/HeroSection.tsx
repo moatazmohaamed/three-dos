@@ -26,12 +26,16 @@ export function HeroSection() {
       <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/50 via-transparent to-black/70"></div>
 
       <div className="relative z-20 max-w-7xl mx-auto px-6 py-32 text-center w-full">
-        <div className="space-y-8">
+        <div className="space-y-5">
           {/* Hero Title */}
           <div className="max-w-5xl mx-auto">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white animate-fade-in">
-              Empowering the Next Generation of Tech Leaders
+              WE ARE THE GAME CHANGERS
             </h1>
+            <p className="text-white/50">
+              ThreeDOS is a student's not-for-profit organization launched from
+              BIS, Helwan university,
+            </p>
           </div>
 
           {/* CTAs */}

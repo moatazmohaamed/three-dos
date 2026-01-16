@@ -1,6 +1,18 @@
+import { useLocation } from "react-router";
 import PillNav from "../ui/PillNav";
 
 const Navbar = () => {
+  const location = useLocation();
+
+  // Determine active href based on current pathname
+  const getActiveHref = () => {
+    const pathname = location.pathname;
+    if (pathname === "/councils") return "/councils";
+    if (pathname === "/contact") return "/contact";
+    if (pathname === "/" || pathname === "/home") return "/";
+    return "/";
+  };
+
   return (
     <div className="fixed top-0 left-0 right-0 z-50 flex justify-center">
       <div className="w-full max-w-7xl px-6 py-4 flex justify-center">
@@ -10,12 +22,12 @@ const Navbar = () => {
           items={[
             { label: "Home", href: "/" },
             { label: "About", href: "#about" },
-            { label: "Councils", href: "#councils" },
-            { label: "Contact", href: "#contact" },
+            { label: "Councils", href: "/councils" },
+            { label: "Contact", href: "/contact" },
           ]}
-          activeHref="/"
+          activeHref={getActiveHref()}
           ease="power3.easeOut"
-          baseColor="#000"
+          baseColor="#000000"
           pillColor="#ffffff"
           hoveredPillTextColor="#ffffff"
           pillTextColor="#000000"

@@ -11,6 +11,7 @@ import type { Route } from "./+types/root";
 import "./app.css";
 
 export const links: Route.LinksFunction = () => [
+  { rel: "icon", href: "/log.jpeg", type: "image/x-icon" },
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
     rel: "preconnect",
@@ -19,7 +20,7 @@ export const links: Route.LinksFunction = () => [
   },
   {
     rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap",
+    href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Xanh+Mono:wght@400;700&display=swap",
   },
 ];
 
@@ -29,6 +30,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" href="/log.jpeg" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/favicon.ico" />
         <Meta />
         <Links />
       </head>

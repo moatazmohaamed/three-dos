@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router";
 import { gsap } from "gsap";
 
 export type PillNavItem = {
@@ -30,8 +31,8 @@ const PillNav: React.FC<PillNavProps> = ({
   className = "",
   ease = "power3.easeOut",
   baseColor = "#fff",
-  pillColor = "#060010",
-  hoveredPillTextColor = "#060010",
+  pillColor = "#0000",
+  hoveredPillTextColor = "#0000",
   pillTextColor,
   onMobileMenuClick,
   initialLoadAnimation = true,
@@ -263,8 +264,8 @@ const PillNav: React.FC<PillNavProps> = ({
         aria-label="Primary"
         style={cssVars}
       >
-        <a
-          href={items?.[0]?.href || "#"}
+        <Link
+          to="/"
           aria-label="Home"
           onMouseEnter={handleLogoEnter}
           ref={(el) => {
@@ -283,7 +284,7 @@ const PillNav: React.FC<PillNavProps> = ({
             ref={logoImgRef}
             className="w-full h-full object-cover block"
           />
-        </a>
+        </Link>
 
         <div
           ref={navItemsRef}
@@ -352,19 +353,36 @@ const PillNav: React.FC<PillNavProps> = ({
               const basePillClasses =
                 "relative overflow-hidden inline-flex items-center justify-center h-full no-underline rounded-full box-border font-semibold text-[16px] leading-[0] uppercase tracking-[0.2px] whitespace-nowrap cursor-pointer px-0";
 
+              const isInternalLink =
+                item.href.startsWith("/") && !item.href.startsWith("//");
+
               return (
                 <li key={item.href} role="none" className="flex h-full">
-                  <a
-                    role="menuitem"
-                    href={item.href}
-                    className={basePillClasses}
-                    style={pillStyle}
-                    aria-label={item.ariaLabel || item.label}
-                    onMouseEnter={() => handleEnter(i)}
-                    onMouseLeave={() => handleLeave(i)}
-                  >
-                    {PillContent}
-                  </a>
+                  {isInternalLink ? (
+                    <Link
+                      role="menuitem"
+                      to={item.href}
+                      className={basePillClasses}
+                      style={pillStyle}
+                      aria-label={item.ariaLabel || item.label}
+                      onMouseEnter={() => handleEnter(i)}
+                      onMouseLeave={() => handleLeave(i)}
+                    >
+                      {PillContent}
+                    </Link>
+                  ) : (
+                    <a
+                      role="menuitem"
+                      href={item.href}
+                      className={basePillClasses}
+                      style={pillStyle}
+                      aria-label={item.ariaLabel || item.label}
+                      onMouseEnter={() => handleEnter(i)}
+                      onMouseLeave={() => handleLeave(i)}
+                    >
+                      {PillContent}
+                    </a>
+                  )}
                 </li>
               );
             })}
@@ -420,18 +438,34 @@ const PillNav: React.FC<PillNavProps> = ({
             const linkClasses =
               "block py-3 px-4 text-[16px] font-medium rounded-[50px] transition-all duration-200 ease-[cubic-bezier(0.25,0.1,0.25,1)]";
 
+            const isInternalLink =
+              item.href.startsWith("/") && !item.href.startsWith("//");
+
             return (
               <li key={item.href}>
-                <a
-                  href={item.href}
-                  className={linkClasses}
-                  style={defaultStyle}
-                  onMouseEnter={hoverIn}
-                  onMouseLeave={hoverOut}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
+                {isInternalLink ? (
+                  <Link
+                    to={item.href}
+                    className={linkClasses}
+                    style={defaultStyle}
+                    onMouseEnter={hoverIn}
+                    onMouseLeave={hoverOut}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <a
+                    href={item.href}
+                    className={linkClasses}
+                    style={defaultStyle}
+                    onMouseEnter={hoverIn}
+                    onMouseLeave={hoverOut}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                )}
               </li>
             );
           })}

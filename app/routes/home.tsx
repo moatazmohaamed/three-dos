@@ -4,10 +4,11 @@ import { HeroSection } from "../components/home/HeroSection";
 import { VisionMission } from "../components/home/VisionMission";
 import OurJourney from "../components/home/OurJorney";
 import Footer from "../components/home/Footer";
+import Sponsers from "~/components/home/Sponsers";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "ThreeDOS - Building a Generation to Lead the Renaissance" },
+    { title: "ThreeDOS" },
     {
       name: "description",
       content:

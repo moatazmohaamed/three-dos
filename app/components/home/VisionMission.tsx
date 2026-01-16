@@ -1,3 +1,5 @@
+import SpotlightCard from "../ui/SpotlightCard";
+
 export function VisionMission() {
   return (
     <section className="relative py-32 px-6" id="about">
@@ -17,7 +19,10 @@ export function VisionMission() {
         {/* Vision & Mission Cards */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {/* Vision Card */}
-          <div className="bg-white/5 backdrop-blur-xl p-8 rounded-3xl border border-white/10 hover:border-indigo-500/50 transition-colors">
+          <SpotlightCard
+            className="p-8"
+            spotlightColor="rgba(139, 92, 246, 0.3)"
+          >
             <div className="space-y-6">
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center">
                 <svg
@@ -41,17 +46,20 @@ export function VisionMission() {
                 </svg>
               </div>
               <h3 className="text-3xl font-bold text-white">Our Vision</h3>
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-md md:text-lg text-gray-300 leading-relaxed">
                 Besides establishing a well-based ethical community, being a
                 leading organization working on creating a generation of role
                 models that are able to lead the community, which we work on
                 through our three aspects.
               </p>
             </div>
-          </div>
+          </SpotlightCard>
 
           {/* Mission Card */}
-          <div className="bg-white/5 backdrop-blur-xl p-8 rounded-3xl border border-white/10 hover:border-cyan-500/50 transition-colors">
+          <SpotlightCard
+            className="p-8"
+            spotlightColor="rgba(6, 182, 212, 0.3)"
+          >
             <div className="space-y-6">
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center">
                 <svg
@@ -69,7 +77,7 @@ export function VisionMission() {
                 </svg>
               </div>
               <h3 className="text-3xl font-bold text-white">Our Mission</h3>
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-md md:text-lg text-gray-300 leading-relaxed">
                 Working on individuals to attain professionalism by developing
                 personal and technical skills, like leadership and other
                 essential foundations. We focus on our three main dimensions
@@ -77,36 +85,29 @@ export function VisionMission() {
                 promote development among youth.
               </p>
             </div>
-          </div>
+          </SpotlightCard>
         </div>
 
         {/* About Us Section */}
         <div className="mt-16">
-          <div className="bg-white/5 backdrop-blur-xl p-12 rounded-3xl border border-white/10">
+          <SpotlightCard
+            className="p-12"
+            spotlightColor="rgba(168, 85, 247, 0.3)"
+          >
             <div className="space-y-6 text-center">
               <h3 className="text-4xl font-bold text-white">About ThreeDOS</h3>
-              <p className="text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
+              <p className="text-md md:text-lg text-gray-300 leading-relaxed max-w-4xl mx-auto">
                 ThreeDOS is a student's not-for-profit organization launched
                 from the Faculty of Commerce and Business Administration BIS
                 department, Helwan University. We focus on three main aspects:{" "}
-                <span className="text-indigo-400 font-semibold">
-                  Soul Rebuild
-                </span>
-                ,{" "}
-                <span className="text-cyan-400 font-semibold">
-                  Brain Refill
-                </span>
-                , and{" "}
-                <span className="text-purple-400 font-semibold">
-                  Academic Committee
-                </span>
-                . Through these dimensions, we believe we can create a
-                generation that will carry on their shoulders the renaissance of
-                this country, putting it in the place it deserves and leading
-                the developed community.
+                Soul Rebuild , Brain Refill , Academic Committee . Through these
+                dimensions, we believe we can create a generation that will
+                carry on their shoulders the renaissance of this country,
+                putting it in the place it deserves and leading the developed
+                community.
               </p>
             </div>
-          </div>
+          </SpotlightCard>
         </div>
       </div>
     </section>
