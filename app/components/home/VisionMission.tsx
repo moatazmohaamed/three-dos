@@ -98,7 +98,7 @@ export function VisionMission() {
               <h3 className="text-4xl font-bold text-white">About ThreeDOS</h3>
               <p className="text-md md:text-lg text-gray-300 leading-relaxed max-w-4xl mx-auto">
                 ThreeDOS is a student's not-for-profit organization launched
-                from the Faculty of Commerce and Business Administration BIS
+                from the Faculty of Commerce and Business Administration FMI/BIS
                 department, Helwan University. We focus on three main aspects:{" "}
                 Soul Rebuild , Brain Refill , Academic Committee . Through these
                 dimensions, we believe we can create a generation that will

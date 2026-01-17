@@ -9,6 +9,7 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import { MouseFollower } from "./components/ui/mouse-follower";
 
 export const links: Route.LinksFunction = () => [
   { rel: "icon", href: "/log.jpeg", type: "image/x-icon" },
@@ -38,6 +39,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body>
         {children}
         <ScrollRestoration />
+        <MouseFollower></MouseFollower>
         <Scripts />
       </body>
     </html>

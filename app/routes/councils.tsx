@@ -19,8 +19,8 @@ import {
   FaVideo,
   FaInstagram,
   FaPalette,
+  FaChalkboardTeacher,
 } from "react-icons/fa";
-
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Our Councils" },
@@ -170,7 +170,6 @@ const councilCategories = {
       description:
         "Manage human resources, talent acquisition, and organizational development. Focus on building strong teams, employee engagement, and creating positive workplace culture.",
       activities: [
-        "Training and development programs",
         "Talent recruitment and onboarding",
         "Performance management",
         "Workplace culture initiatives",
@@ -179,6 +178,22 @@ const councilCategories = {
       gradientTo: "to-yellow-500",
       spotlightColor: "rgba(245, 158, 11, 0.3)",
       accentColor: "text-amber-400",
+    },
+    {
+      icon: <FaChalkboardTeacher />,
+      title: "Training and Development",
+      description:
+        "Design and implement comprehensive training programs to enhance skills and capabilities. Focus on professional development, learning initiatives, and continuous improvement across the organization.",
+      activities: [
+        "Skills assessment and training programs",
+        "Professional development workshops",
+        "Learning management systems",
+        "Performance improvement initiatives",
+      ],
+      gradientFrom: "from-purple-500",
+      gradientTo: "to-indigo-500",
+      spotlightColor: "rgba(147, 51, 234, 0.3)",
+      accentColor: "text-purple-400",
     },
     {
       icon: <FaHeart />,

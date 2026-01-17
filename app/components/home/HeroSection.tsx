@@ -2,11 +2,11 @@ import { Button } from "../ui/Button";
 import Beams from "../ui/Beams";
 import Navbar from "./Navbar";
 import { Link } from "react-router";
+import { PointerHighlight } from "../ui/pointer-highlight";
 
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden w-full">
-      {/* LightRays Background */}
       <div className="absolute inset-0 z-0 w-full h-full">
         <Navbar />
         <div style={{ width: "100%", height: "600px", position: "relative" }}>
@@ -40,12 +40,15 @@ export function HeroSection() {
         <div className="space-y-5">
           {/* Hero Title */}
           <div className="max-w-5xl mx-auto">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white animate-fade-in">
-              WE ARE THE GAME CHANGERS
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white animate-fade-in text-center">
+              WE ARE THE{" "}
+              <span className="inline-block">
+                <PointerHighlight>GAME CHANGERS</PointerHighlight>
+              </span>
             </h1>
-            <p className="text-white/50">
+            <p className="text-white/50 text-center mt-4">
               ThreeDOS is a student's not-for-profit organization launched from
-              BIS, Helwan university,
+              FMI/BIS, Helwan university,
             </p>
           </div>
 
